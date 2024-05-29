@@ -2,6 +2,6 @@
 
 # Repositório voltado para o curso Spring Boot 2 Essentials DevDojo Academy
 
-- adicionado as dependencias no pom.xml, a dependencia do mysql e a spring data jpa
-- transfamando a anime domain em uma entidade do banco de dados com as annotations @Entity, @Id, @GeneratedValue, @NoArgsConstructor
-- adicionando o arquivo de conexão com o banco de dados
+- Conectar as classes e pegar os dados dentro do banco de dados
+- extender a classe JpaRepository na classe AnimeRepository
+- Não é recomendando pelo sonarlint usar as mesmas classes domain como argumentos com RequestBody, o ideal é usar a DTO da classe como argumento nos métodos da service
