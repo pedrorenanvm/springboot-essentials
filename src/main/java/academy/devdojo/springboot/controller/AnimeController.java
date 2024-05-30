@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 // Sem lógica de negocio
 @RestController // ela tem a @ResponseBody e faz com que todos os retornos dos métodos dessa classe retornam Strings,depois vamos transforma-las em JSON
 @RequestMapping("animes") // Mapea os end-points geralmente declarado no plural
@@ -37,6 +38,12 @@ public class AnimeController {
     public ResponseEntity<Anime> findById(@PathVariable long id){
         return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
+
+    @GetMapping(path = "/find")
+    public ResponseEntity<List<Anime>> findByName(@RequestParam String name){
+        return new ResponseEntity<>(animeService.findByName(name), HttpStatus.OK);
+    }
+
     @PostMapping //Vamos retornar o objeto
     public ResponseEntity<Anime> save(@RequestBody AnimePostRequestBody animePostRequestBody){
         return new ResponseEntity<>(animeService.save(animePostRequestBody), HttpStatus.CREATED);
