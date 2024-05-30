@@ -2,5 +2,8 @@
 
 # Repositório voltado para o curso Spring Boot 2 Essentials DevDojo Academy
 
-- Passar parametros pela URL sem que as URls fiquem ambiguas, dois @GetMappings mapeando pesquisas diferentes pela URL
-- Utilizando @RequestParam conseguimos mapear a variável que vai dentro da url sem que gere ambiguidade
+- Criar um HandleGlobal para as exceções, maior consistencia, padronizar os campos retornados quando se tem 
+algum tipo de exceção na requisição. 
+- Padronizar as exceptions, na aula trocamos a BadRequest pela nossa própria exceptions a BadRequestException,
+em um projeto de larga escala isso ajuda a equipe de FrontEnd eles vão estar esperando o padrão que o objeto vai 
+vir, vai ter mais consistencia 
